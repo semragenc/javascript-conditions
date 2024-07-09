@@ -187,3 +187,45 @@ kullanicilar.forEach((kullanici) => {
     }
 })
 console.log("Toplam driver sayısı: ", totalDriver)
+console.log("Kullanıcılar: ", kullanicilar)
+
+//Listeye daha sonra veri ekleyebiliyorum : PUSH İLE
+kullanicilar.push({ name: "Can", age: 10, gender: "male", employeType: "HR" })
+
+//Lisrtedeki son eklenen elemanı silebiliyorum: POP İLE
+kullanicilar.pop()
+
+//Listeyi filtreler: FİLTER İLE
+const filteredUser = kullanicilar.filter((kullanici) => {
+    return kullanici.age > 30
+})
+console.log("Filtrelenen kişiler: ", filteredUser)
+
+//Listeyi değiştirebilirim: MAP İLE
+const mappedUser = kullanicilar.map((kullanici) => {
+    if (kullanici.name === "Can") {
+        kullanici.name = "Obama"
+    }
+    return kullanici
+})
+console.log(mappedUser)
+
+//Sıralama işlemi yapabilirim : SORTED İLE
+const sortedUser = kullanicilar.sort((a, b) => {
+    return b.age - a.age
+})
+console.log(sortedUser)
+
+//
+
+function calculateTotal(number) {
+  let count = 1;
+  let total = 0;
+
+  while (count <= number) {
+    total += count;
+    count += 1;
+  }
+
+  return total;
+}
