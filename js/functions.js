@@ -108,16 +108,93 @@ console.log("Öğrencinin Yaşı: ", student.age)
 console.log("Öğrencinin Adı: ",student.name)
 console.log("Öğrencinin Bildiği Diller: ", student.programmingLanguages)
 //
-const isName = prompt("Adınız: ")
-const isSurname = prompt("Soyadınız: ")
-alert("Merhaba " + isName + " " + isSurname)
+//onst isName = prompt("Adınız: ")
+//const isSurname = prompt("Soyadınız: ")
+//alert("Merhaba " + isName + " " + isSurname)
 
 //
-const sayiBir = prompt("Birinci Sayıyı giriniz: ")
-const sayiIki = prompt("İkinci Sayıyı giriniz: ")
+//const sayiBir = prompt("Birinci Sayıyı giriniz: ")
+//const sayiIki = prompt("İkinci Sayıyı giriniz: ")
 
-toplamHesapla(sayiBir , sayiIki)
+//toplamHesapla(sayiBir , sayiIki)
 
 function toplamHesapla(a , b) {
     alert(parseInt(a) + parseInt(b))
 }
+ //messagePiece = message.split(" ").length
+    //return messagePiece * pricePerWord;
+function calculateEngravingPrice(message, pricePerWord) {
+    return message.split(" ").length * pricePerWord;
+
+}
+
+console.log(calculateEngravingPrice("JavaScript is in my blood", 10))
+console.log(calculateEngravingPrice("JavaScript is in my blood", 20))
+console.log(calculateEngravingPrice("Web-development is creative work", 40))
+console.log(calculateEngravingPrice("Web-development is creative work", 20))
+
+const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
+const result = planets.slice(1, 3);
+console.log(result); // ["Mars", "Venus"]
+console.log(planets.slice(1)); // ["Mars", "Venus", "Jupiter", "Saturn"]
+console.log(planets.slice(2)); // ["Venus", "Jupiter", "Saturn"]
+console.log(planets.slice(-2)); // ["Jupiter", "Saturn"]
+
+planets.push("Jupiter")
+planets.push("Saturn", "Neptune")
+console.log(planets)
+//
+const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+const firstTwoEls = fruits.slice(0, 2);
+const nonExtremeEls = fruits.slice(1,4);
+const lastThreeEls = fruits.slice(-3);
+
+const firstArray = ["Mercury", "Venus"];
+const secondArray = ["Mars", "Jupiter"];
+const all= firstArray.concat(secondArray);
+
+console.log(all); // ["Mercury", "Venus", "Mars", "Jupiter"];
+
+
+//indexOf() metodu, elemanları karşılaştırırken katı eşitlik (===) gerçekleştirir.
+
+function getSlice(array, value) {
+    const index = array.indexOf(value);
+    
+    if (index === -1) {
+        return [];
+    }
+    
+    return array.slice(0, index + 1);
+}
+
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Poly"))
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Ajax"))
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Mango"))
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Mango"))
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Casey"))
+
+//push
+const tags = [];
+
+for(let i = 0; i < 3; i += 1) {
+	tags.push(`tag-${i}`);
+}
+
+console.log(tags); // ["tag-0", "tag-1", "tag-2"]
+
+
+function multiply() {
+  let total = 1;
+
+  for (const arg of arguments) {
+    total *= arg;
+  }
+
+  return total;
+}
+
+console.log(multiply(1, 2, 3)); //  6
+console.log(multiply(1, 2, 3, 4)); //  24
+console.log(multiply(1, 2, 3, 4, 5)); //  120
